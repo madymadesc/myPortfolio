@@ -140,6 +140,7 @@ ul
     border: none;
     background: var(--skin-color);
     transition: all 0.3s ease;
+    margin-top: 20px;
 }
 .btn:hover
 {
@@ -769,6 +770,12 @@ h3.my-profession
     {
         display: none;
     }
+
+    .back{
+        background:url(../images/bad.jpg) no-repeat;
+        background-size: cover;
+        background-clip: var(--bg-black-100);
+    }
 }
 @media (max-width:767px)
 {
@@ -813,3 +820,7 @@ h3.my-profession
 .tm-social-links li a:hover i.fa-youtube { color: #c70f08; }
 .tm-social-links li a:hover i.fa-twitter { color: #1dd1d4; }
 .tm-social-links li a:hover i.fa-comments { color: #10d623; }
+
+#case{
+    color: #f2f2fc;
+}

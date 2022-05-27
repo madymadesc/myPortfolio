@@ -8,6 +8,7 @@
   <title> Mon site personnel</title>
   <!-- ==(:(:== CSS Files ===== -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/menu.css">
   <link rel="stylesheet" href="css/skins/color-4.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="css/slider.css">
@@ -15,6 +16,22 @@
 </head>
 
 <body>
+  <header class="heade">
+    <!-- <div class="menus" id="hamburger-icon" onclick="myFunction()"> -->
+    <div class="menus" id="hamburger-icon" onclick="toggleMobileMenu(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+      <ul class="mobile-menu" id="navi">
+        <li><a href="#home" class="menu active"><i class="fa fa-home"></i>Accueil</a></li>
+        <li><a href="#about" class="menu"><i class="fa fa-user"></i>A propos de moi</a></li>
+        <li><a href="#competence" class="menu"><i class="fa fa-certificate"></i>Competences</a></li>
+        <li><a href="#portfolio" class="menu"><i class="fa fa-briefcase"></i>Réalisations</a></li>
+        <li><a href="#services" class="menu"><i class="fa fa-list"></i>Services</a></li>
+        <li><a href="#contact" class="menu"><i class="fa fa-comments"></i>Contactez Moi</a></li>
+      </ul>
+    </div>
+  </header>
   <!-- ==(:(:=== Main Container Start ===== -->
   <div class="main-container">
     <!-- ==(:(:=== Aside Start ===== -->
@@ -25,26 +42,30 @@
       <div class="nav-toggler">
         <span>Développeur Web et Mobile</span>
       </div>
-      <ul class="nav">
-        <li><a href="#home" class="active"><i class="fa fa-home"></i>Accueil</a></li>
-        <li><a href="#about"><i class="fa fa-user"></i>A propos de moi</a></li>
-        <li><a href="#competence"><i class="fa fa-certificate"></i>Competences</a></li>
-        <li><a href="#portfolio"><i class="fa fa-briefcase"></i>Réalisations</a></li>
-        <li><a href="#services"><i class="fa fa-list"></i>Services</a></li>
-        <li><a href="#contact"><i class="fa fa-comments"></i>Contactez Moi</a></li>
+      <ul class="nav" id="navi">
+        <li><a href="#home" class="menu active"><i class="fa fa-home"></i>Accueil</a></li>
+        <li><a href="#about"class="menu"><i class="fa fa-user"></i>A propos de moi</a></li>
+        <li><a href="#competence"class="menu"><i class="fa fa-certificate"></i>Competences</a></li>
+        <li><a href="#portfolio"class="menu"><i class="fa fa-briefcase"></i>Réalisations</a></li>
+        <li><a href="#services"class="menu"><i class="fa fa-list"></i>Services</a></li>
+        <li><a href="#contact"class="menu"><i class="fa fa-comments"></i>Contactez Moi</a></li>
       </ul>
+
+
     </div>
+   
+  
     <!-- ===== Aside End ===== -->
     <!-- ===== Main Content Start ===== -->
-    <div class="main-content">
+    <div id="myDIV" class="main-content">
       <!-- ===== Home Section Start ===== -->
-      <section class="home section" id="home">
+      <section class="home section back" id="home">
         <div class="container">
           <div class="row">
             <div class="home-info padd-15">
               <h3 class="hello">Salut, je m'appelle<span class="name"> Mady CAMARA</span></h3>
               <h3 class="my-profession">Je suis un <span class="typing">Développeur Web et Mobile</span></h3>
-              <p>Avec plusieur année d'expérience, mon expertise est la création et la conception de site web,
+              <p>Avec plusieur année d'expérience, mon expertise est la création et la conception de site web et
                 d'application mobile.</p>
 
 
@@ -82,10 +103,10 @@
                   </a>
                 </li>
                 <li class="mb-2">
-                      <a href="#contact" class="d-flex align-items-center justify-content-center">
-                          <i class="fa fa-comments"></i>
-                      </a>
-                  </li>
+                  <a href="#contact" class="d-flex align-items-center justify-content-center">
+                    <i class="fa fa-comments"></i>
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -177,7 +198,7 @@
                     </div>
                   </div>
                   <div class="experience padd-15">
-                    <h3 class="title">.</h3>
+                    <h3 class="title" id="case">.</h3>
                     <div class="row">
                       <div class="timeline-box padd-15">
                         <div class="timeline shadow-dark">
@@ -240,7 +261,7 @@
                     </div>
                   </div>
                   <div class="experience padd-15">
-                    <h3 class="title">.</h3>
+                    <h3 class="title" id="case">.</h3>
                     <div class="row">
                       <div class="timeline-box padd-15">
                         <div class="timeline shadow-dark">
@@ -476,7 +497,7 @@
                       </div>
                     </div>
                     <div class="experience padd-15">
-                      <h3 class="title">.</h3>
+                      <h3 class="title" id="case">.</h3>
                       <div class="row">
                         <div class="timeline-box padd-15">
                           <div class="timeline shadow-dark">
@@ -574,7 +595,7 @@
                 </div>
                 <h4>Conception de site Web</h4>
                 <p>
-                  Un site internet professionnel efficace en responsive design pour présenter votre entreprise et 
+                  Un site internet professionnel efficace en responsive design pour présenter votre entreprise et
                   faire bonne impression sur le net.
                 </p>
               </div>
@@ -824,7 +845,7 @@
             </div>
             <!-- ===== Contact info item end ====== -->
           </div>
-          
+
           <!-- social -->
           <div class="row" style="justify-content: center;">
             <div class="col-sm contact-moi">
@@ -859,19 +880,21 @@
                   </a>
                 </li>
                 <li class="mb-2">
-                  <a href="https://twitter.com/MadyMades" target="blank" class="d-flex align-items-center justify-content-center">
-                      <i class="fab fa-twitter"></i>
+                  <a href="https://twitter.com/MadyMades" target="blank"
+                    class="d-flex align-items-center justify-content-center">
+                    <i class="fab fa-twitter"></i>
                   </a>
-              </li>
+                </li>
                 <li class="mb-2">
-                      <a href="https://www.facebook.com/profile.php?id=100005718254286" target="blank" class="d-flex align-items-center justify-content-center">
-                          <i class="fab fa-facebook"></i>
-                      </a>
-                  </li>
-                  <li class="mb-2">
-                    <a href="https://youtube.com" target="blank" class="d-flex align-items-center justify-content-center">
-                        <i class="fab fa-youtube"></i>
-                    </a>
+                  <a href="https://www.facebook.com/profile.php?id=100005718254286" target="blank"
+                    class="d-flex align-items-center justify-content-center">
+                    <i class="fab fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="mb-2">
+                  <a href="https://youtube.com" target="blank" class="d-flex align-items-center justify-content-center">
+                    <i class="fab fa-youtube"></i>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -934,7 +957,9 @@
   <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script src="js/script.js"></script>
   <script src="js/message.js"></script>
-
+  <script src="js/menu.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="js/menuActive.js"></script>
 </body>
 
 </html>
