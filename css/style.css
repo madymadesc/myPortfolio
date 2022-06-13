@@ -772,7 +772,7 @@ h3.my-profession
     }
 
     .back{
-        background:url(../images/bad.jpg) no-repeat;
+        background:url(../images/bad1.gif) no-repeat;
         background-size: cover;
         background-clip: var(--bg-black-100);
     }
